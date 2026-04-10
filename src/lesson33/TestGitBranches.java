@@ -10,5 +10,7 @@ public class TestGitBranches {
         System.out.println(sum);
 
         System.out.println("mybranch was created");
+
+        System.out.println("learning when conflict happening");
     }
 }
