@@ -8,5 +8,7 @@ public class TestGitBranches {
             sum += i;
         }
         System.out.println(sum);
+
+        System.out.println("mybranch was created");
     }
 }
