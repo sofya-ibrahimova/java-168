@@ -7,7 +7,9 @@ public class Lesson33 {
     }
 
     public static int sum(int a, int b) {
-        return a + b;
+        int sum = a + b;
+        if (a + b > 0) return sum;
+        return Math.abs(sum);
     }
 
 }
