@@ -4,11 +4,15 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class UserRepository {
+    private final String selectQuery = "SELECT * FROM user";
+    private final String InsertQuery = "INSERT INTO user (name, surname, city) values (?, ?, ?)";
+    private final String DeleteQuery = "DELETE FROM user where id = ?";
 
-    //add getAllStudents()  getStudentByID deleteStudent updateStudent   addStudent
+
+    // getAllStudents()  getStudentByID deleteStudent updateStudent  addStudent
 
 
-    public static PreparedStatement generatePrepareStatementForUser(User user) throws SQLException {
+    public static PreparedStatement generatePrepareStatement(User user) throws SQLException {
         PreparedStatement preparedStatement = DbConfig.connection.prepareStatement
                 ("INSERT INTO user (name, surname, city) values (?, ?, ?)");
         preparedStatement.setString(1, user.getName());
@@ -16,6 +20,12 @@ public class UserRepository {
         preparedStatement.setString(3, user.getCity());
         return preparedStatement;
     }
+
+public static PreparedStatement generatePrepareStatementForUser1(User user) throws SQLException {
+    PreparedStatement preparedStatement = DbConfig.connection.prepareStatement("SELECT * FROM user");
+    return preparedStatement;
+
+}
 
 
 
