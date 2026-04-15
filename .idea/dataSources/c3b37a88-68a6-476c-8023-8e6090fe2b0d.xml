@@ -3,9 +3,8 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.54">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>957</IntrospectionStateNumber>
       <ServerVersion>18.3</ServerVersion>
-      <StartupTime>1774457495</StartupTime>
+      <StartupTime>1776170879</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -802,7 +801,6 @@ false Zulu
 14860||10|C|G
 14860||-9223372036854775808|U|G
 14860||10|U|G</Grants>
-      <IntrospectionStateNumber>957</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4310,9 +4308,6 @@ false Zulu
     </schema>
     <schema id="270" parent="2" name="location_department_employee">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
-      <LastIntrospectionL1Xid>957</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>957</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>957</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
       <LastIntrospectionLocalTimestamp>2026-03-31.15:34:05</LastIntrospectionLocalTimestamp>
       <ObjectId>16537</ObjectId>
@@ -4329,9 +4324,6 @@ false Zulu
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <LastIntrospectionL1Xid>955</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>955</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>955</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
       <LastIntrospectionLocalTimestamp>2026-03-31.15:33:48</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
@@ -4529,7 +4521,7 @@ false Zulu
     <table id="297" parent="272" name="users">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16596</ObjectId>
-      <StateNumber>1102</StateNumber>
+      <StateNumber>1113</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -5175,7 +5167,13 @@ false Zulu
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="391" parent="297" name="users_pkey">
+    <column id="391" parent="297" name="age">
+      <Position>5</Position>
+      <StateNumber>1113</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="392" parent="297" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16603</ObjectId>
@@ -5184,7 +5182,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="392" parent="297" name="users_pkey">
+    <key id="393" parent="297" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16604</ObjectId>
       <Primary>1</Primary>
