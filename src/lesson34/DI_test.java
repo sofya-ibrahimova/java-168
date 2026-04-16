@@ -6,7 +6,7 @@ public class DI_test {
         DieselEngine dieselEngine = new DieselEngine();
         ElectricalEngine electricalEngine = new ElectricalEngine();
 
-        Car car = new Car("BMW", "X5",electricalEngine );
+        Car car = new Car("BMW", "X5",dieselEngine );
         car.start();
     }
 }
