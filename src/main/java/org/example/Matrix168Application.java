@@ -1,13 +1,12 @@
-package org.example.matrix168;
+package org.example;
 
-import org.example.matrix168.model.Car;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 @SpringBootApplication(scanBasePackages = {
         "org.example.matrix168",
-        "org.example.jdbc_task"
+        "org.example.product_management_api",
+        "org.example.MiniLibraryApplicationSystem"
 })
 public class Matrix168Application {
 

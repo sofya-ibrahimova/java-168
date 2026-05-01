@@ -1,7 +1,7 @@
 package org.example.jdbc_task.controller;
 
 import org.example.jdbc_task.model.Customer;
-import org.example.jdbc_task.repository.CustomerRepositoryJdbc;
+import org.example.jdbc_task.model.CustomerEntity;
 import org.example.jdbc_task.service.CustomerServiceJdbc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +26,7 @@ public class CustomerControllerJdbc {
 
 
     @GetMapping("/{id}")
-    public Optional<Customer> findById(@PathVariable Integer id) throws SQLException {
+    public Customer findById(@PathVariable Integer id) throws SQLException {
         logger.info("GET customer by id: " + id);
         return customerServiceJdbc.findById(id);
     }
@@ -38,14 +38,18 @@ public class CustomerControllerJdbc {
     }
 
     @PostMapping
-    public Customer save(@RequestBody Customer customer) throws SQLException {
+    public void save(@RequestBody Customer customer) throws SQLException {
         logger.info("POST add customer: " + customer);
-        return customerServiceJdbc.save(customer);
+         customerServiceJdbc.save(customer);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id) throws SQLException {
         logger.info("DELETE delete customer by id: " + id);
        customerServiceJdbc.delete(id);
+    }
+    @PutMapping("/{id}")
+            public void update (@RequestBody Customer customer, @PathVariable Integer id){
+
     }
 }
